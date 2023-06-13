@@ -1,0 +1,140 @@
+main {
+  transform: translateY(100px);
+}
+.aboutconference {
+  background: #151853;
+  display: flex;
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 1px;
+
+  height: 800px;
+  & .container {
+    margin-top: 100px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    & .welcome {
+      display: flex;
+      &-left {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        & h1 {
+          color: #df42b1;
+          font-size: 15px;
+
+          border-bottom: 1px solid rgba($color: white, $alpha: 0.5);
+          padding-bottom: 5px;
+        }
+        & h2 {
+          margin: 10px 0px;
+          font-size: 40px;
+          color: white;
+        }
+        & p {
+          color: white;
+          font-size: 18px;
+        }
+        & a {
+          margin-top: 40px;
+          & button {
+            border-radius: 60px;
+            width: 150px;
+            height: 45px;
+            position: relative;
+            color: white;
+            font-size: 13px;
+            word-spacing: 10px;
+            cursor: pointer;
+            & span {
+              z-index: 100;
+            }
+
+            &:hover::after {
+              background: white;
+              width: 100%;
+              z-index: 1;
+            }
+            &::before {
+              content: "";
+              transition: 0.5s;
+              background: #df42b1;
+              border-radius: 60px;
+              position: absolute;
+              left: 0;
+              top: 0;
+              height: 100%;
+              width: 100%;
+            }
+            &::after {
+              content: "";
+              transition: 0.8s;
+              background: transparent;
+              border-radius: 60px;
+              position: absolute;
+              left: 0;
+              top: 0;
+              height: 100%;
+              width: 0%;
+              z-index: -1;
+            }
+          }
+        }
+      }
+    }
+  }
+  & .date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+
+    &-conference {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      justify-content: center;
+      & h1 {
+        color: #df42b1;
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      & h2 {
+        color: white;
+        font-size: 27px;
+        margin-top: 5px;
+      }
+    }
+    & .timer {
+      width: 70%;
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 35px;
+        margin: 0px;
+        padding: 0px;
+        & li {
+          width: 120px;
+          height: 120px;
+          border: 1px solid rgba($color: white, $alpha: 0.5);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          & h1 {
+            color: white;
+            margin: 0px;
+            font-size: 60px;
+            letter-spacing: 1px;
+          }
+          & h2 {
+            color: rgba($color: white, $alpha: 0.5);
+            margin: 0px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
