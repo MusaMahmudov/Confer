@@ -4,9 +4,12 @@
   width: 100%;
   height: 1200px;
   background-image: url("https://preview.colorlib.com/theme/confer/img/bg-img/3.jpg.webp");
-  background-color: red;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
+  position: relative;
+
   & .container {
     margin-top: 100px;
     display: flex;
@@ -60,13 +63,15 @@
           margin: 3px;
           font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
             sans-serif;
-          font-weight: 500;
+          font-weight: bolder;
+          backdrop-filter: blur(5px);
         }
         & h2 {
           font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
             sans-serif;
           transform: translate(30px, -50px);
-          font-weight: 500;
+          backdrop-filter: blur(5px);
+          font-weight: bolder;
 
           position: absolute;
 

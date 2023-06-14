@@ -8,13 +8,13 @@ header {
   right: 0;
   left: 0;
   background: black;
-  height: 100px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 5;
+  width: 100%;
   & .navbar {
-    width: 1100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,7 +67,7 @@ header {
               &::before {
                 content: "";
                 transition: 0.5s;
-                background: #df42b1;
+                background: linear-gradient(120deg, #505add 0%, #df42b1 100%);
                 border-radius: 60px;
                 position: absolute;
                 left: 0;

@@ -1,5 +1,4 @@
 main {
-  transform: translateY(100px);
   display: flex;
   flex-direction: column;
 }
@@ -10,10 +9,9 @@ main {
   justify-content: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   letter-spacing: 1px;
-
-  height: 800px;
+  height: 950px;
   & .container {
-    margin-top: 100px;
+    margin-top: 200px;
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -62,7 +60,8 @@ main {
             &::before {
               content: "";
               transition: 0.5s;
-              background: #df42b1;
+              background: linear-gradient(120deg, #505add 0%, #df42b1 100%);
+
               border-radius: 60px;
               position: absolute;
               left: 0;
