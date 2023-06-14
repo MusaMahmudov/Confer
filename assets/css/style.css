@@ -141,26 +141,13 @@ main {
   color: white;
   font-size: 13px;
   word-spacing: 10px;
+  background: transparent;
+  border: none;
+  z-index: 1;
   cursor: pointer;
 }
-.aboutconference .container .welcome-left a button span {
-  z-index: 100;
-}
-.aboutconference .container .welcome-left a button:hover::after {
-  background: white;
-  width: 100%;
-  z-index: 1;
-}
-.aboutconference .container .welcome-left a button::before {
-  content: "";
-  transition: 0.5s;
-  background: linear-gradient(120deg, #505add 0%, #df42b1 100%);
-  border-radius: 60px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
+.aboutconference .container .welcome-left a button:hover {
+  color: black;
 }
 .aboutconference .container .welcome-left a button::after {
   content: "";
@@ -172,6 +159,22 @@ main {
   top: 0;
   height: 100%;
   width: 0%;
+  z-index: -1;
+}
+.aboutconference .container .welcome-left a button:hover::after {
+  background: white;
+  width: 100%;
+}
+.aboutconference .container .welcome-left a button::before {
+  content: "";
+  transition: 0.5s;
+  border-radius: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(120deg, #505add 0%, #df42b1 100%);
+  height: 100%;
+  width: 100%;
   z-index: -1;
 }
 .aboutconference .date {
