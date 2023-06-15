@@ -1,5 +1,7 @@
+@import "../../utils/variables";
+
 .cards {
-  background: linear-gradient(120deg, #505add 0%, #df42b1 100%);
+  background: $buttonColorMain;
   display: flex;
   justify-content: center;
   letter-spacing: 1px;
@@ -84,7 +86,7 @@
 
                 top: 0;
                 left: 0;
-                background: linear-gradient(120deg, #505add 0%, #df42b1 100%);
+                background: $buttonColorMain;
                 border-radius: 50px;
 
                 height: 100%;
@@ -95,7 +97,7 @@
               margin-top: 20px;
             }
             & h1 {
-              background: #df42b1;
+              background: $mainHeadingColor;
               margin-top: 0px;
               border-bottom-left-radius: 5px;
               border-bottom-right-radius: 5px;
@@ -108,7 +110,7 @@
               margin: 20px;
               margin-bottom: 0px;
               position: relative;
-              color: #111343;
+              color: $mainBackgroundColor;
             }
 
             & b {
@@ -121,7 +123,7 @@
 
           & .advantages {
             & i {
-              color: #df42b1;
+              color: $mainHeadingColor;
               margin-right: 5px;
               font-size: 15px;
             }

@@ -1,6 +1,26 @@
+@import "../../utils/variables";
+
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.circle {
+  position: fixed;
+  color: wheat;
+  z-index: 1000;
+  bottom: 45px;
+  right: 45px;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  background: $mainHeadingColor;
+  border-radius: 50%;
+  transition: 0.5s;
+  &:hover {
+    background: black;
+  }
 }
 header {
   position: fixed;
@@ -36,12 +56,21 @@ header {
               color: white;
               text-decoration: none;
               font-size: 15px;
+              transition: 0.5s;
+              display: flex;
+              & i {
+                margin-left: 5px;
+                color: $mainHeadingColor;
+              }
+              &:hover {
+                color: $mainHeadingColor;
+              }
             }
           }
           &:first-child {
             & button {
               a {
-                color: #df42b1;
+                color: $mainHeadingColor;
               }
             }
           }
@@ -67,7 +96,7 @@ header {
               &::before {
                 content: "";
                 transition: 0.5s;
-                background: linear-gradient(120deg, #505add 0%, #df42b1 100%);
+                background: $buttonColorMain;
                 border-radius: 60px;
                 position: absolute;
                 left: 0;
