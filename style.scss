@@ -8,3 +8,13 @@
 @import "./assets/source/components/blog/blog";
 @import "./assets/source/components/contact/contact";
 @import "./assets/source/components/footer/footer";
+
+.container {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 0.8s;
+}
+.checked {
+  transform: translateY(0px) !important;
+  opacity: 1 !important;
+}

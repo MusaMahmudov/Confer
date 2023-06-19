@@ -6,6 +6,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+html {
+  scroll-behavior: smooth;
+}
 .circle {
   position: fixed;
   color: wheat;
@@ -48,7 +51,39 @@ header {
         display: flex;
         align-items: center;
         gap: 30px;
+
         & li {
+          position: relative;
+          margin-left: 10px;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          & .window {
+            transition: 0.2s;
+            padding: 0px;
+            margin: 0px;
+            background: white;
+            position: absolute;
+            width: 140px;
+            top: 40px;
+            left: -10px;
+            flex-direction: column;
+            padding: 10px 20px;
+            border-radius: 5px;
+            align-items: start;
+            opacity: 1;
+            & li {
+              & a {
+                text-decoration: none;
+                color: #111343;
+                transition: 0.5s;
+              }
+              &:hover a {
+                color: $mainHeadingColor;
+              }
+            }
+          }
           & button {
             background: transparent;
             border: none;
@@ -123,4 +158,8 @@ header {
       }
     }
   }
+}
+.hidden {
+  opacity: 0 !important;
+  top: 80px !important;
 }

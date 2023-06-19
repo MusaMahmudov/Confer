@@ -5,6 +5,10 @@ body {
   flex-direction: column;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .circle {
   position: fixed;
   color: wheat;
@@ -51,6 +55,36 @@ header .navbar-right ul {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+header .navbar-right ul li {
+  position: relative;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+header .navbar-right ul li .window {
+  transition: 0.2s;
+  padding: 0px;
+  margin: 0px;
+  background: white;
+  position: absolute;
+  width: 140px;
+  top: 40px;
+  left: -10px;
+  flex-direction: column;
+  padding: 10px 20px;
+  border-radius: 5px;
+  align-items: start;
+  opacity: 1;
+}
+header .navbar-right ul li .window li a {
+  text-decoration: none;
+  color: #111343;
+  transition: 0.5s;
+}
+header .navbar-right ul li .window li:hover a {
+  color: #df42b1;
 }
 header .navbar-right ul li button {
   background: transparent;
@@ -113,6 +147,11 @@ header .navbar-right ul li:last-child button::after {
   height: 100%;
   width: 0%;
   z-index: -1;
+}
+
+.hidden {
+  opacity: 0 !important;
+  top: 80px !important;
 }
 
 main {
@@ -1131,6 +1170,7 @@ footer {
   letter-spacing: 1px;
   display: flex;
   justify-content: center;
+  height: 400px;
 }
 footer .container {
   margin-top: 50px;
@@ -1140,6 +1180,7 @@ footer .container {
   padding: 20px;
 }
 footer .container .row2 {
+  opacity: 1 !important;
   border-top: 1px solid #9293bc;
   margin-top: 40px;
   display: flex;
@@ -1265,4 +1306,15 @@ footer .container .row1 ul li h1 {
 }
 footer .container .row1 ul li p {
   color: #9293bc;
+}
+
+.container {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.checked {
+  transform: translateY(0px) !important;
+  opacity: 1 !important;
 }/*# sourceMappingURL=style.css.map */
